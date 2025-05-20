@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mega Sorte</string>
+    <string name="initial_value">00</string>
+    <string name="title">Mega Sorte</string>
+    <string name="msg">Clique no botão abaixo para gerar seus números da sorte!</string>
+    <string name="button_text">Sortear Números</string>
+    <string name="content_description_image">Horseshoe</string>
+</resources>

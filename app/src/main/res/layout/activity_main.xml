@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/blockone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="@color/colorDarkGreen">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="@string/title"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/blockone"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgvw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/horseshoe256_removebg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blockone"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/content_description_image" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgvw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/colorDarkGreen"
+        android:textSize="18sp"
+        android:layout_margin="32dp"
+        android:text="@string/msg"/>
+
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_value"
+        app:layout_constraintTop_toBottomOf="@id/imgvw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/num2"
+        style="@style/number_seq_style"/>
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_value"
+        app:layout_constraintTop_toBottomOf="@id/imgvw"
+        app:layout_constraintStart_toEndOf="@id/num1"
+        app:layout_constraintEnd_toStartOf="@id/num3"
+        style="@style/number_seq_style"/>
+
+    <TextView
+        android:id="@+id/num3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_value"
+        app:layout_constraintTop_toBottomOf="@id/imgvw"
+        app:layout_constraintStart_toEndOf="@id/num2"
+        app:layout_constraintEnd_toStartOf="@id/num4"
+        style="@style/number_seq_style"/>
+
+    <TextView
+        android:id="@+id/num4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_value"
+        app:layout_constraintTop_toBottomOf="@id/imgvw"
+        app:layout_constraintStart_toEndOf="@id/num3"
+        app:layout_constraintEnd_toStartOf="@id/num5"
+        style="@style/number_seq_style"
+        />
+
+    <TextView
+        android:id="@+id/num5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_value"
+        app:layout_constraintTop_toBottomOf="@id/imgvw"
+        app:layout_constraintStart_toEndOf="@id/num4"
+        app:layout_constraintEnd_toStartOf="@id/num6"
+        style="@style/number_seq_style" />
+
+    <TextView
+        android:id="@+id/num6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_value"
+        app:layout_constraintTop_toBottomOf="@id/imgvw"
+        app:layout_constraintStart_toEndOf="@id/num5"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/number_seq_style"/>
+
+    <Button
+        android:id="@+id/luckButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/msg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/button_text"
+        style="@style/buttom_style"
+        tools:ignore="VisualLintButtonSize" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9489902677023247/3876918871"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintBottom_toBottomOf="parent">
+    </com.google.android.gms.ads.AdView>
+</androidx.constraintlayout.widget.ConstraintLayout>
